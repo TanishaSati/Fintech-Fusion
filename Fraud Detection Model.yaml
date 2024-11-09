@@ -1,0 +1,142 @@
+# Fraud Detection Model Configuration for Bharat DeFi
+
+model:
+  name: "Bharat DeFi Fraud Detection Model"
+  type: "XGBoostClassifier" # You can replace with your chosen model (e.g., RandomForest, LogisticRegression)
+  hyperparameters:
+    n_estimators: 500
+    max_depth: 10
+    learning_rate: 0.01
+    subsample: 0.8
+    colsample_bytree: 0.8
+    gamma: 0.1
+    min_child_weight: 1
+
+features:
+  selection:
+    - "transaction_amount"
+    - "user_balance"
+    - "transaction_type"
+    - "sender_address"
+    - "receiver_address"
+    - "gas_fee"
+    - "time_of_transaction"
+    - "user_device"
+    - "smart_contract_interaction"
+  encoding:
+    - "sender_address"
+    - "receiver_address"
+    - "user_device"
+  scaling:
+    - "transaction_amount"
+    - "user_balance"
+    - "gas_fee"
+
+data:
+  source: "blockchain"
+  path: "/path/to/bharat_defi_data.csv" # Path to transaction data file
+  transaction_threshold: 10000 # Amount threshold to flag suspicious transactions
+  fraud_label_column: "is_fraud"
+  train_size: 0.8
+  validation_size: 0.2
+
+evaluation:
+  metrics:
+    - "accuracy"
+    - "precision"
+    - "recall"
+    - "f1_score"
+    - "roc_auc"
+  threshold: 0.75 # Fraud probability threshold above which the transaction is flagged
+
+logging:
+  enabled: true
+  log_file: "bharat_defi_fraud_detection.log"
+  log_level: "INFO" # Options: DEBUG, INFO, WARNING, ERROR, CRITICAL
+
+training:
+  epochs: 50
+  batch_size: 64
+  early_stopping:
+    enabled: true
+    patience: 5
+    min_delta: 0.001
+
+model_storage:
+  enabled: true
+  model_file_path: "models/fraud_detection_model.pkl" # Path to save the trained model
+  backup_frequency: "weekly" # How often to back up the model
+
+alerts:
+  enabled: true
+  send_alerts: true
+  alert_email: "admin@bharatdefi.com"
+  alert_threshold: 0.9 # If fraud probability exceeds this threshold, trigger an alert
+
+transaction_monitoring:
+  enabled: true
+  real_time_analysis: true
+  analyze_interval: "5 minutes" # Frequency of monitoring suspicious transactions
+  monitoring_threshold: 0.7 # Threshold above which transactions are flagged as suspicious
+
+security:
+  encryption:
+    enabled: true
+    method: "AES-256" # Data encryption method for sensitive transaction data
+  access_control:
+    roles:
+      - "admin"
+      - "analyst"
+      - "developer"
+    permissions:
+      admin: "read-write"
+      analyst: "read-only"
+      developer: "read-write"
+
+audit:
+  enabled: true
+  audit_log_file: "audit_logs/fraud_detection_audit.log"
+  log_format: "json" # JSON format for better integration with auditing tools
+
+# Optional: Backup configurations
+backup:
+  enabled: true
+  backup_frequency: "daily"
+  backup_path: "/path/to/backup/"
+  backup_time: "03:00" # Time to trigger the backup (24-hour format)
+
+# Optional: Notifications for fraud detection alerts
+notifications:
+  enabled: true
+  types:
+    - "email"
+    - "sms"
+    - "push_notification"
+  sms_service:
+    api_key: "your_sms_service_api_key"
+    sender_id: "BharatDeFi"
+  push_notification_service:
+    api_key: "your_push_notification_service_api_key"
+  notification_frequency: "hourly"
+
+# Data enrichment for fraud detection
+data_enrichment:
+  enabled: true
+  services:
+    - "geolocation_enrichment"
+    - "device_fingerprint"
+    - "ip_address_verification"
+
+# Model update settings
+model_update:
+  enabled: true
+  update_frequency: "monthly"
+  retrain_model_on_update: true
+  model_versioning: true
+
+# General settings
+general:
+  fraud_detection_enabled: true
+  fraud_detection_model_version: "v1.0"
+  fraud_detection_start_date: "2024-11-01"
+  model_description: "Model to detect fraudulent transactions in the Bharat DeFi ecosystem based on blockchain transactions."
