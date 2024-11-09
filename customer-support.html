@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support | Bharat DeFi</title>
+    
+    <!-- Embedded CSS for the Support Page -->
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #a8e6cf 0%, #dcedc1 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #f3f4f6;
+        }
+
+        .support-page {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .support-container {
+            background-color: #ffffff;
+            padding: 3rem;
+            width: 100%;
+            max-width: 600px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            color: #333;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .support-form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+        }
+
+        label {
+            display: block;
+            color: #555;
+            margin: 0.5rem 0 0.3rem;
+            font-weight: 500;
+            text-align: left;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            font-size: 1rem;
+            outline: none;
+            margin-bottom: 1rem;
+            transition: all 0.3s;
+            background-color: #f9f9f9;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        input[type="text"]:focus,
+        textarea:focus {
+            border-color: #33a6b8;
+            background-color: #fff;
+        }
+
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+            padding: 0.8rem;
+            background: linear-gradient(135deg, #33a6b8, #2c9ea7);
+            color: #ffffff;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            box-shadow: 0 8px 15px rgba(44, 158, 167, 0.4);
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #2c9ea7, #1e7580);
+        }
+
+        .back-link {
+            font-size: 1rem;
+            color: #555;
+            margin-top: 1rem;
+        }
+
+        .back-link a {
+            color: #2c9ea7;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #error-message,
+        #success-message {
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+
+        #error-message {
+            color: #e74c3c;
+        }
+
+        #success-message {
+            color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+    <div class="support-page">
+        <div class="support-container">
+            <h2>Contact Support</h2>
+            <p>If you have any issues or questions, feel free to reach out to us. We're here to help!</p>
+            
+            <!-- Support Form -->
+            <form class="support-form" id="supportForm">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+                <label for="email">Your Email</label>
+                <input type="text" id="email" name="email" required placeholder="Enter your email">
+
+                <label for="message">Reason for contact</label>
+                <textarea id="message" name="message" required placeholder="Enter your message"></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+
+            <p id="error-message"></p>
+            <p id="success-message"></p>
+
+            <p class="back-link">Go back to <a href="index.html">Dashboard</a></p>
+        </div>
+    </div>
+
+    <!-- JavaScript for handling form submission -->
+    <script>
+        document.getElementById("supportForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+            const errorMessage = document.getElementById("error-message");
+            const successMessage = document.getElementById("success-message");
+
+            // Simple form validation
+            if (name === "" || email === "" || message === "") {
+                errorMessage.textContent = "Please fill in all fields.";
+                successMessage.textContent = "";
+                return;
+            }
+
+            // Simulate form submission (you can replace this with actual API call)
+            successMessage.textContent = "Your message has been sent successfully!";
+            errorMessage.textContent = "";
+            document.getElementById("supportForm").reset();
+
+            // Simulate redirection after message is sent
+            setTimeout(() => {
+                window.location.href = "index.html"; // Redirect back to dashboard after submission
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

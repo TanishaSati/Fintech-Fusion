@@ -1,0 +1,1080 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+}
+/* Add to your existing styles */
+
+/* Position the auth links on the top right */
+.auth-links {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.1em;
+  }
+  
+  .auth-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: auto;
+    transition: color 0.3s;
+  }
+  
+  .auth-links a:hover {
+    color: #f78c22;
+  }
+
+/* Navigation Bar Styles */
+nav {
+    background: linear-gradient(90deg, #c33764, #1d2571dc); /* Pink gradient background */
+    padding: 2px 0; /* More padding for better spacing */
+    border-radius: 10px; /* Rounded edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    border: 2px solid white;
+}
+
+.navbar {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the items */
+    list-style: none; /* Remove bullet points */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+.navbar ul {
+    list-style-type:none;
+    margin: 3px;
+    padding: 5px;
+    align-items: center;
+  }
+.navbar li {
+    margin: 0 0px; /* Horizontal spacing between links */
+    display: flex; /* Use flex on list item */
+    align-items: center; /* Center items vertically */
+    position: relative; /* Required for positioning divider */
+    text-align: center; /* Center align the text */
+}
+
+.navbar li:not(:last-child)::after {
+    content: "|"; /* Divider content */
+    font-size: 16px;
+    line-height: 1;
+    color: white; /* Color of the divider */
+    margin-left: 3px; /* Space between text and divider */
+    margin-right: 3px; 
+    padding-left: 25px;
+    padding-right: 0px;
+    /*margin-left: 5px; Space between text and divider */
+}
+
+.navbar a {
+    color: white; /* White text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
+    font-size: 16px; /* Slightly increased font size */
+    padding: 5px 3px; /* Padding around text for click area */
+    border-radius: 5px; /* Rounded corners for the links */
+    transition: background 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+.navbar a:hover {
+    background: rgba(255, 255, 255, 0.2); /* Light background on hover */
+    color: #ffffff; /* Gold color on hover */
+}
+
+.navbar a.active {
+    background: rgba(255, 255, 255, 0.4); /* Light background for active link */
+    color: #b9e5f8; /* Gold color for active link */
+}
+/* Dropdown specific styles */
+/* Dropdown specific styles */
+.dropdown {
+    position: relative; /* Keeps the dropdown in position relative to its parent */
+}
+
+.dropdown-content {
+    display: none; /* Hide by default */
+    position: absolute;
+    top: 100%; /* Position it just below the dropdown tab */
+    left: -25%; /* Align it with the left of the parent element */
+    background-color: #ffffff; /* White background */
+    min-width: 160px; /* Set width of dropdown */
+    z-index: 1; /* Ensure it appears above other elements */
+    border-radius: 5px; /* Rounded corners for dropdown */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for dropdown */
+}
+
+.dropdown-content a {
+    color: rgb(17, 0, 111);
+    padding: 12px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #bebabd;
+    color: rgb(17, 0, 111);
+}
+
+/* Show the dropdown content when hovering over the "Marketplace" tab */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* CSS for Educational Resources */
+#resources {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+/* Style for article items */
+.article-item {
+    border: 2px solid #1e90ff; /* Border color and thickness */
+    padding: 15px; /* Padding inside the article box */
+    margin: 10px; /* Margin around the article box */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+    transition: background 0.3s ease; /* Smooth transition for background on hover */
+  }
+  
+  /* Style for article links */
+  .article-item a {
+    color: #1e90ff; /* Color of the link */
+    text-decoration: none; /* Removes underline */
+    transition: color 0.3s ease; /* Smooth transition for link color */
+  }
+  
+  /* Hover effect for article box */
+  .article-item:hover {
+    background: linear-gradient(to top, #f9f9f9, #2fb6e3); /* Gradient from bottom to top on hover */
+  }
+  
+  /* Hover effect for links inside the article */
+  .article-item:hover a {
+    color: #ffffff; /* Change color of the link when hovering over the article */
+  }
+  
+/* Style for article links */
+.article-item a {
+    color: #043a71; /* Change to desired color */
+    text-decoration: none; /* Removes underline */
+  }
+  
+  /* Hover effect for links */
+  .article-item a:hover {
+    color: #ff4500; /* Change color on hover */
+  }
+  /* Style for video headers */
+.video-item h3 {
+    color: #043a71; /* Initial color of the video header */
+    transition: color 0.3s ease; /* Smooth transition for header color */
+  }
+  
+  /* Hover effect for video headers */
+  .video-item:hover h3 {
+    color: #ff4500; /* Change color of video header on hover */
+  }
+  
+
+.resource-item {
+    width: 300px;
+    text-align: center;
+}
+
+.resource-item img, .resource-item video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+/* CSS for Regulatory Compliance */
+#regulatory-compliance {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 50px;
+    background-color: #f5f5f5;
+}
+
+/* Style for regulatory compliance article items */
+.resource-item {
+    border: 2px solid #1e90ff; /* Border color and thickness */
+    padding: 15px; /* Padding inside the article box */
+    margin: 10px; /* Margin around the article box */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+    transition: background 0.3s ease; /* Smooth transition for background on hover */
+    width: 300px; /* Fixed width for consistency */
+    text-align: center; /* Center-align text */
+    margin-bottom: 30px; /* Add space below the articles */
+}
+
+/* Hover effect for regulatory compliance articles */
+.resource-item:hover {
+    background: linear-gradient(to top, #f9f9f9, #3340f0); /* Gradient from bottom to top on hover */
+}
+
+/* Style for article links inside the regulatory compliance section */
+.resource-item a {
+    color: #1e90ff; /* Initial color of the link */
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none; /* Removes underline */
+    transition: color 0.3s ease; /* Smooth transition for link color */
+}
+
+/* Hover effect for article links inside the regulatory compliance section */
+.resource-item:hover a {
+    color: #ff4500; /* Change color of the link when hovering over the article */
+}
+
+/* Style for text inside the article items */
+.resource-item p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Video section styling */
+#regulatory-compliance .col {
+    flex: 1;
+    margin: 0 15px;
+    text-align: center;
+}
+
+/* Add vertical space between articles and videos */
+#regulatory-compliance .row:first-of-type {
+    margin-bottom: 40px; /* Vertical space between the articles and video rows */
+}
+
+/* Styling for video headers in regulatory compliance */
+.video-item h3 {
+    color: #043a71;
+    transition: color 0.3s ease;
+    text-align: center; /* Center align the video headers */
+    margin-top: 20px; /* Add margin for space from the video item */
+}
+
+/* Hover effect for video headers */
+.video-item:hover h3 {
+    color: #ff4500;
+}
+
+/* Styling for embedded videos */
+#regulatory-compliance iframe {
+    width: 100%;
+    height: 220px;
+    border: none;
+}
+
+/* Styling for video text under the video */
+#regulatory-compliance .col p {
+    font-size: 14px;
+    color: #555;
+}
+
+
+
+/* Body Styling */
+body {
+    color: #333;
+    background-color: #f4f4f9;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+header p {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+/* Navigation Bar */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 1.5rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Section Styling */
+section {
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 900px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #1d2671;
+    margin-bottom: 1rem;
+    font-size: 1.8em;
+}
+
+section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Button Styling */
+button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1em;
+    color: #fff;
+    background-color: #1d2671;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #c33764;
+}
+
+/* Vultr Services List */
+section#services ul {
+    list-style: none;
+    display: flex;
+    flex-wrap:wrap;
+    gap: 5rem;
+}
+
+section#services li {
+    flex: 1 1 45%;
+    padding: 0.5rem;
+    background-color: #f8f9fa;
+    border-left: 4px solid #1d2671;
+    border-radius: 4px;
+    font-size: 1em;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1d2671;
+    color: #fff;
+    font-size: 0.9em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 60%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h3 {
+    color: #1d2671;
+    margin-bottom: 1rem;
+}
+
+.modal-content p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5em;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: #c33764;
+}
+
+/* Styles for the contact form section */
+/* Contact Section */
+#contact {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    /* Center the section horizontally */
+    max-width: 600px;
+    /* Limit the width of the section */
+    display: flex;
+    flex-direction: column;
+    /* Align items in a column */
+    align-items: center;
+    /* Center the items horizontally */
+    justify-content: center;
+    /* Center the items vertically */
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 400px;
+    /* Set a max-width for the form */
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    width: 100%;
+    /* Make input and button full width */
+    margin-bottom: 10px;
+    /* Space between elements */
+}
+
+label {
+    display: flex;
+    /* Use flex for labels to align icon and text */
+    align-items: center;
+    /* Center the icon vertically */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    /* Full width */
+}
+
+button {
+    align-self: center;
+    /* Center align the button */
+}
+/* Crypto Dashboard Section */
+#crypto-dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+
+.crypto-item {
+    width: 30%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.crypto-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.crypto-item h2 {
+    color: #1d2671;
+    font-size: 1.8em;
+    margin-bottom: 1rem;
+}
+
+.crypto-item .crypto-price {
+    font-size: 1.5em;
+    color: #28a745;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.crypto-item .crypto-trend {
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.crypto-item .crypto-trend .arrow {
+    margin-left: 0.5rem;
+}
+
+.crypto-item .crypto-description {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Trend Indicator Styles */
+.up {
+    color: green;
+}
+
+.down {
+    color: red;
+}
+
+.stable {
+    color: gray;
+}
+
+/* Crypto Market Stats Section */
+#market-stats {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+#market-stats h2 {
+    color: #1d2671;
+    font-size: 2em;
+    margin-bottom: 1.5rem;
+}
+
+#market-stats .stats-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+#market-stats .stats-item:last-child {
+    border-bottom: none;
+}
+
+.stats-item span {
+    font-size: 1.2em;
+}
+
+/* Crypto News Section */
+#crypto-news {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 2rem;
+}
+
+.news-item {
+    width: 48%;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.news-item h3 {
+    font-size: 1.5em;
+    color: #1d2671;
+    margin-bottom: 1rem;
+}
+
+.news-item p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+.news-item a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #1d2671;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.news-item a:hover {
+    background-color: #c33764;
+}
+/* Add margin to the "Buy Now" button */
+.buy-now-btn {
+    margin-bottom: 30px; /* Adjust the value to increase the space */
+}
+
+/* Alternatively, you can add margin to the following images */
+.crypto-card img {
+    margin-top: 20px; /* Adds space between the image and the previous element (button) */
+}
+
+
+/* Hero Section */
+.hero {
+    background: url('hero-bg.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 80px 20px;
+    text-align: center;
+    color: #1d2671;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+/* Investment Opportunities Section */
+.investment-opportunities {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.investment-opportunities h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.investment-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.investment-card {
+    background: white;
+    width: 30%;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.investment-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.investment-card h3 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}
+
+.investment-card p {
+    font-size: 1em;
+}
+
+/* How It Works Section */
+.how-it-works {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.how-it-works h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.step {
+    text-align: center;
+    width: 30%;
+    margin-bottom: 40px;
+}
+
+.step img {
+    width: 80%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.step h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.step p {
+    font-size: 1em;
+}
+
+/* Educational Resources Section */
+.resources {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.resources h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.resource-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.resource-link {
+    background-color: #251780;
+    color: white;
+    padding: 12px 30px;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.resource-link:hover {
+    background-color: #ffffff;
+    color: #251780; /* Text color on hover */
+}
+
+/* Call to Action (CTA) Section */
+.cta {
+    background-color: #251780;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.cta h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffffff; 
+}
+
+.cta p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #87b7ef; 
+}
+
+.cta-btn {
+    background-color: #fff;
+    color: #251780;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #33339e;
+    color: white; /* Text color on hover */
+}
+
+/* Second Navigation Bar */
+#second-navbar {
+    background: linear-gradient(90deg, #c33764, #1d2571dc); /* Pink gradient background */
+    padding: 2px 0; /* More padding for better spacing */
+    border-radius: 10px; /* Rounded edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    border: 2px solid white;
+}
+
+/* Flexbox for the navbar links */
+#second-navbar .navbar {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the items */
+    list-style: none; /* Remove bullet points */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* Navbar items */
+#second-navbar .navbar li {
+    margin: 0 5px; /* Horizontal spacing between items */
+    display: flex; /* Flex on list item */
+    align-items: center; /* Vertically center items */
+    position: relative; /* Positioning for divider */
+    text-align: center; /* Center the text */
+}
+
+/* Divider between items */
+#second-navbar .navbar li:not(:last-child)::after {
+    content: "|"; /* Divider content */
+    font-size: 16px;
+    line-height: 1;
+    color: white; /* Divider color */
+    margin-left: 3px; /* Space between text and divider */
+    margin-right: 3px;
+}
+
+/* Navbar links styling */
+#second-navbar .navbar a {
+    color: white; /* White text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
+    font-size: 16px; /* Font size */
+    padding: 5px 10px; /* Padding for click area */
+    border-radius: 5px; /* Rounded corners */
+    transition: background 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* Hover effect for navbar links */
+#second-navbar .navbar a:hover {
+    background: rgba(255, 255, 255, 0.2); /* Light background on hover */
+    color: #ffffff; /* Hover color */
+}
+
+/* Active link styling */
+#second-navbar .navbar a.active {
+    background: rgba(255, 255, 255, 0.4); /* Light background for active link */
+    color: #b9e5f8; /* Gold color for active link */
+}
+
+/* Dropdown specific styles for second navbar */
+#second-navbar .dropdown {
+    position: relative; /* Position relative to parent */
+}
+
+#second-navbar .dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%; /* Below the dropdown button */
+    left: 0;
+    background-color: #ffffff;
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Dropdown items */
+#second-navbar .dropdown-content a {
+    color: rgb(17, 0, 111);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Hover effect for dropdown items */
+#second-navbar .dropdown-content a:hover {
+    background-color: #bebabd;
+    color: rgb(17, 0, 111);
+}
+
+/* Show dropdown when hovering over the dropdown parent */
+#second-navbar .dropdown:hover .dropdown-content {
+    display: block;
+}
+/* SME Funding Page Styling */
+#sme-funding {
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+#sme-funding h2 {
+    font-size: 2em;
+    color: #1d2671;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#sme-funding p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 800px;
+}
+
+#sme-funding .funding-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.funding-option {
+    width: 300px;
+    background-color: #fff;
+    border: 2px solid #1d2671;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.funding-option h3 {
+    font-size: 1.8em;
+    color: #1d2671;
+    margin-bottom: 15px;
+}
+
+.funding-option p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.funding-option a {
+    text-decoration: none;
+    background-color: #1d2671;
+    color: #fff;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.funding-option a:hover {
+    background-color: #c33764;
+}
+
+.funding-option:hover {
+    background-color: #f1f1f1;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Funding Details Section */
+#sme-funding .funding-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.funding-details .detail-item {
+    width: 80%;
+    max-width: 900px;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #1d2671;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.funding-details .detail-item h3 {
+    font-size: 1.8em;
+    color: #1d2671;
+    margin-bottom: 15px;
+}
+
+.funding-details .detail-item p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.funding-details .detail-item a {
+    color: #1d2671;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.funding-details .detail-item a:hover {
+    color: #c33764;
+}
+
+.funding-details .detail-item:hover {
+    background-color: #f1f1f1;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Button to apply for funding */
+#sme-funding .apply-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #1d2671;
+    color: #1d2671;
+    font-size: 1.2em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
+}
+
+#sme-funding .apply-button:hover {
+    background-color: #c33764;
+}
+footer a {
+    color: #ffffff; /* Updated color */
+    text-decoration: none;
+    font-size: 1em;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+/* Chatbot Icon */
+#chatbotIcon {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom of the screen */
+    right: 20px;  /* Distance from the right of the screen */
+    width: 60px;  /* Icon size */
+    height: 60px;
+    background-color: #007bff;  /* Icon background color */
+    border-radius: 50%;  /* Circular shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  #chatbotIcon img {
+    width: 40px;  /* Size of the chatbot icon image */
+    height: 40px;
+  }
+  
